@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47117B3B1959CA1400B20209 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47117B3A1959CA1400B20209 /* Foundation.framework */; };
+		47117B3D1959CA1400B20209 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47117B3C1959CA1400B20209 /* CoreGraphics.framework */; };
+		47117B3F1959CA1400B20209 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47117B3E1959CA1400B20209 /* UIKit.framework */; };
+		47117B411959CA1400B20209 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47117B401959CA1400B20209 /* SpriteKit.framework */; };
+		47117B471959CA1400B20209 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47117B451959CA1400B20209 /* InfoPlist.strings */; };
+		47117B491959CA1400B20209 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47117B481959CA1400B20209 /* main.m */; };
+		47117B4D1959CA1400B20209 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47117B4C1959CA1400B20209 /* AppDelegate.m */; };
+		47117B501959CA1400B20209 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47117B4E1959CA1400B20209 /* Main.storyboard */; };
+		47117B531959CA1400B20209 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47117B521959CA1400B20209 /* ViewController.m */; };
+		47117B561959CA1400B20209 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 47117B551959CA1400B20209 /* MyScene.m */; };
+		47117B581959CA1400B20209 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 47117B571959CA1400B20209 /* Spaceship.png */; };
+		47117B5A1959CA1400B20209 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47117B591959CA1400B20209 /* Images.xcassets */; };
+		47117B611959CA1400B20209 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47117B601959CA1400B20209 /* XCTest.framework */; };
+		47117B621959CA1400B20209 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47117B3A1959CA1400B20209 /* Foundation.framework */; };
+		47117B631959CA1400B20209 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47117B3E1959CA1400B20209 /* UIKit.framework */; };
+		47117B6B1959CA1400B20209 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47117B691959CA1400B20209 /* InfoPlist.strings */; };
+		47117B6D1959CA1400B20209 /* CircuitRacerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47117B6C1959CA1400B20209 /* CircuitRacerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47117B641959CA1400B20209 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47117B2F1959CA1400B20209 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47117B361959CA1400B20209;
+			remoteInfo = CircuitRacer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47117B371959CA1400B20209 /* CircuitRacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircuitRacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47117B3A1959CA1400B20209 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		47117B3C1959CA1400B20209 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47117B3E1959CA1400B20209 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		47117B401959CA1400B20209 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		47117B441959CA1400B20209 /* CircuitRacer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircuitRacer-Info.plist"; sourceTree = "<group>"; };
+		47117B461959CA1400B20209 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47117B481959CA1400B20209 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47117B4A1959CA1400B20209 /* CircuitRacer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CircuitRacer-Prefix.pch"; sourceTree = "<group>"; };
+		47117B4B1959CA1400B20209 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		47117B4C1959CA1400B20209 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		47117B4F1959CA1400B20209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		47117B511959CA1400B20209 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		47117B521959CA1400B20209 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		47117B541959CA1400B20209 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		47117B551959CA1400B20209 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		47117B571959CA1400B20209 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		47117B591959CA1400B20209 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		47117B5F1959CA1400B20209 /* CircuitRacerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircuitRacerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47117B601959CA1400B20209 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		47117B681959CA1400B20209 /* CircuitRacerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircuitRacerTests-Info.plist"; sourceTree = "<group>"; };
+		47117B6A1959CA1400B20209 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47117B6C1959CA1400B20209 /* CircuitRacerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircuitRacerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47117B341959CA1400B20209 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47117B3D1959CA1400B20209 /* CoreGraphics.framework in Frameworks */,
+				47117B3F1959CA1400B20209 /* UIKit.framework in Frameworks */,
+				47117B411959CA1400B20209 /* SpriteKit.framework in Frameworks */,
+				47117B3B1959CA1400B20209 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47117B5C1959CA1400B20209 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47117B611959CA1400B20209 /* XCTest.framework in Frameworks */,
+				47117B631959CA1400B20209 /* UIKit.framework in Frameworks */,
+				47117B621959CA1400B20209 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47117B2E1959CA1400B20209 = {
+			isa = PBXGroup;
+			children = (
+				47117B421959CA1400B20209 /* CircuitRacer */,
+				47117B661959CA1400B20209 /* CircuitRacerTests */,
+				47117B391959CA1400B20209 /* Frameworks */,
+				47117B381959CA1400B20209 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		47117B381959CA1400B20209 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47117B371959CA1400B20209 /* CircuitRacer.app */,
+				47117B5F1959CA1400B20209 /* CircuitRacerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47117B391959CA1400B20209 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47117B3A1959CA1400B20209 /* Foundation.framework */,
+				47117B3C1959CA1400B20209 /* CoreGraphics.framework */,
+				47117B3E1959CA1400B20209 /* UIKit.framework */,
+				47117B401959CA1400B20209 /* SpriteKit.framework */,
+				47117B601959CA1400B20209 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47117B421959CA1400B20209 /* CircuitRacer */ = {
+			isa = PBXGroup;
+			children = (
+				47117B4B1959CA1400B20209 /* AppDelegate.h */,
+				47117B4C1959CA1400B20209 /* AppDelegate.m */,
+				47117B4E1959CA1400B20209 /* Main.storyboard */,
+				47117B511959CA1400B20209 /* ViewController.h */,
+				47117B521959CA1400B20209 /* ViewController.m */,
+				47117B541959CA1400B20209 /* MyScene.h */,
+				47117B551959CA1400B20209 /* MyScene.m */,
+				47117B571959CA1400B20209 /* Spaceship.png */,
+				47117B591959CA1400B20209 /* Images.xcassets */,
+				47117B431959CA1400B20209 /* Supporting Files */,
+			);
+			path = CircuitRacer;
+			sourceTree = "<group>";
+		};
+		47117B431959CA1400B20209 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47117B441959CA1400B20209 /* CircuitRacer-Info.plist */,
+				47117B451959CA1400B20209 /* InfoPlist.strings */,
+				47117B481959CA1400B20209 /* main.m */,
+				47117B4A1959CA1400B20209 /* CircuitRacer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47117B661959CA1400B20209 /* CircuitRacerTests */ = {
+			isa = PBXGroup;
+			children = (
+				47117B6C1959CA1400B20209 /* CircuitRacerTests.m */,
+				47117B671959CA1400B20209 /* Supporting Files */,
+			);
+			path = CircuitRacerTests;
+			sourceTree = "<group>";
+		};
+		47117B671959CA1400B20209 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47117B681959CA1400B20209 /* CircuitRacerTests-Info.plist */,
+				47117B691959CA1400B20209 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47117B361959CA1400B20209 /* CircuitRacer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47117B701959CA1400B20209 /* Build configuration list for PBXNativeTarget "CircuitRacer" */;
+			buildPhases = (
+				47117B331959CA1400B20209 /* Sources */,
+				47117B341959CA1400B20209 /* Frameworks */,
+				47117B351959CA1400B20209 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CircuitRacer;
+			productName = CircuitRacer;
+			productReference = 47117B371959CA1400B20209 /* CircuitRacer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47117B5E1959CA1400B20209 /* CircuitRacerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47117B731959CA1400B20209 /* Build configuration list for PBXNativeTarget "CircuitRacerTests" */;
+			buildPhases = (
+				47117B5B1959CA1400B20209 /* Sources */,
+				47117B5C1959CA1400B20209 /* Frameworks */,
+				47117B5D1959CA1400B20209 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47117B651959CA1400B20209 /* PBXTargetDependency */,
+			);
+			name = CircuitRacerTests;
+			productName = CircuitRacerTests;
+			productReference = 47117B5F1959CA1400B20209 /* CircuitRacerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47117B2F1959CA1400B20209 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ryoichi Hara";
+				TargetAttributes = {
+					47117B5E1959CA1400B20209 = {
+						TestTargetID = 47117B361959CA1400B20209;
+					};
+				};
+			};
+			buildConfigurationList = 47117B321959CA1400B20209 /* Build configuration list for PBXProject "CircuitRacer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 47117B2E1959CA1400B20209;
+			productRefGroup = 47117B381959CA1400B20209 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47117B361959CA1400B20209 /* CircuitRacer */,
+				47117B5E1959CA1400B20209 /* CircuitRacerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47117B351959CA1400B20209 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47117B471959CA1400B20209 /* InfoPlist.strings in Resources */,
+				47117B5A1959CA1400B20209 /* Images.xcassets in Resources */,
+				47117B581959CA1400B20209 /* Spaceship.png in Resources */,
+				47117B501959CA1400B20209 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47117B5D1959CA1400B20209 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47117B6B1959CA1400B20209 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47117B331959CA1400B20209 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47117B561959CA1400B20209 /* MyScene.m in Sources */,
+				47117B531959CA1400B20209 /* ViewController.m in Sources */,
+				47117B4D1959CA1400B20209 /* AppDelegate.m in Sources */,
+				47117B491959CA1400B20209 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47117B5B1959CA1400B20209 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47117B6D1959CA1400B20209 /* CircuitRacerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47117B651959CA1400B20209 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47117B361959CA1400B20209 /* CircuitRacer */;
+			targetProxy = 47117B641959CA1400B20209 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		47117B451959CA1400B20209 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47117B461959CA1400B20209 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		47117B4E1959CA1400B20209 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47117B4F1959CA1400B20209 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		47117B691959CA1400B20209 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47117B6A1959CA1400B20209 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47117B6E1959CA1400B20209 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		47117B6F1959CA1400B20209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47117B711959CA1400B20209 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircuitRacer/CircuitRacer-Prefix.pch";
+				INFOPLIST_FILE = "CircuitRacer/CircuitRacer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		47117B721959CA1400B20209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircuitRacer/CircuitRacer-Prefix.pch";
+				INFOPLIST_FILE = "CircuitRacer/CircuitRacer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		47117B741959CA1400B20209 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CircuitRacer.app/CircuitRacer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircuitRacer/CircuitRacer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CircuitRacerTests/CircuitRacerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		47117B751959CA1400B20209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CircuitRacer.app/CircuitRacer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CircuitRacer/CircuitRacer-Prefix.pch";
+				INFOPLIST_FILE = "CircuitRacerTests/CircuitRacerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47117B321959CA1400B20209 /* Build configuration list for PBXProject "CircuitRacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47117B6E1959CA1400B20209 /* Debug */,
+				47117B6F1959CA1400B20209 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47117B701959CA1400B20209 /* Build configuration list for PBXNativeTarget "CircuitRacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47117B711959CA1400B20209 /* Debug */,
+				47117B721959CA1400B20209 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		47117B731959CA1400B20209 /* Build configuration list for PBXNativeTarget "CircuitRacerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47117B741959CA1400B20209 /* Debug */,
+				47117B751959CA1400B20209 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47117B2F1959CA1400B20209 /* Project object */;
+}
