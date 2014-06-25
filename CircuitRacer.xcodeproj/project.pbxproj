@@ -472,6 +472,7 @@
 				47117B721959CA1400B20209 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47117B731959CA1400B20209 /* Build configuration list for PBXNativeTarget "CircuitRacerTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +481,7 @@
 				47117B751959CA1400B20209 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
