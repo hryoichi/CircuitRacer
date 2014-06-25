@@ -14,3 +14,15 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+typedef NS_ENUM(int, CRCarType) {
+    CRYellowCar = 1,
+    CRBlueCar,
+    CRRedCar
+};
+
+typedef NS_ENUM(int, CRLevelType) {
+    CRLevelEasy = 1,
+    CRLevelMedium,
+    CRLevelHard
+};
