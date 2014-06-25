@@ -11,39 +11,42 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Configure the view.
-    SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
-    
-    // Create and configure the scene.
-    SKScene * scene = [MyScene sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
-    
-    // Present the scene.
-    [skView presentScene:scene];
 }
 
-- (BOOL)shouldAutorotate
-{
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+
+    SKView *skView = (SKView *)self.view;
+
+#ifdef DEBUG
+    skView.showsFPS = YES;
+    skView.showsNodeCount = YES;
+#endif
+
+    if (!skView.scene) {
+        MyScene *scene = [[MyScene alloc]
+            initWithSize:skView.bounds.size carType:CRYellowCar level:CRLevelEasy];
+        scene.scaleMode = SKSceneScaleModeAspectFill;
+        [skView presentScene:scene];
+    }
+}
+
+- (BOOL)shouldAutorotate {
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
-{
+- (NSUInteger)supportedInterfaceOrientations {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         return UIInterfaceOrientationMaskAllButUpsideDown;
-    } else {
+    }
+    else {
         return UIInterfaceOrientationMaskAll;
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
 }
