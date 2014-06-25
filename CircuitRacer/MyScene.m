@@ -12,6 +12,8 @@
 
 @property (nonatomic, assign) CRCarType carType;
 @property (nonatomic, assign) CRLevelType levelType;
+@property (nonatomic, assign) NSTimeInterval timeInSeconds;
+@property (nonatomic, assign) NSInteger noOfLabs;
 
 @end
 
@@ -34,7 +36,26 @@
 #pragma mark - Private
 
 - (void)p_initializeGame {
+    [self p_loadLevel];
 
+    SKSpriteNode *track = ({
+        NSString *imageName = [NSString stringWithFormat:@"track_%i", _levelType];
+        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:imageName];
+        sprite.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        sprite;
+    });
+    [self addChild:track];
+}
+
+- (void)p_loadLevel {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"LevelDetails" ofType:@"plist"];
+    NSArray *level = [NSArray arrayWithContentsOfFile:filePath];
+
+    NSNumber *timeInSeconds = level[_levelType - 1][@"time"];
+    _timeInSeconds = [timeInSeconds doubleValue];
+
+    NSNumber *laps = level[_levelType - 1][@"laps"];
+    _noOfLabs = [laps integerValue];
 }
 
 @end
