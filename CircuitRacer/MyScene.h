@@ -10,4 +10,6 @@
 
 @interface MyScene : SKScene
 
+- (instancetype)initWithSize:(CGSize)size carType:(CRCarType)carType level:(CRLevelType)levelType;
+
 @end

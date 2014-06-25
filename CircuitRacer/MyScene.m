@@ -8,6 +8,33 @@
 
 #import "MyScene.h"
 
+@interface MyScene ()
+
+@property (nonatomic, assign) CRCarType carType;
+@property (nonatomic, assign) CRLevelType levelType;
+
+@end
+
 @implementation MyScene
+
+#pragma mark - Lifecycle
+
+- (instancetype)initWithSize:(CGSize)size carType:(CRCarType)carType level:(CRLevelType)levelType {
+    self = [super initWithSize:size];
+
+    if (self) {
+        _carType = carType;
+        _levelType = levelType;
+        [self p_initializeGame];
+    }
+
+    return self;
+}
+
+#pragma mark - Private
+
+- (void)p_initializeGame {
+
+}
 
 @end
