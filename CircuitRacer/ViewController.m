@@ -8,6 +8,14 @@
 
 #import "ViewController.h"
 #import "MyScene.h"
+#import "AnalogControl.h"
+
+@interface ViewController ()
+
+@property (nonatomic, strong) SKView *skView;
+@property (nonatomic, strong) AnalogControl *analogControl;
+
+@end
 
 @implementation ViewController
 
@@ -18,19 +26,35 @@
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
 
-    SKView *skView = (SKView *)self.view;
+    if (!self.skView) {
+        self.skView = [[SKView alloc] initWithFrame:self.view.bounds];
+        MyScene *scene = [[MyScene alloc]
+            initWithSize:self.skView.bounds.size carType:CRYellowCar level:CRLevelEasy];
+        scene.scaleMode = SKSceneScaleModeAspectFill;
+        [self.skView presentScene:scene];
+
+        [self.view addSubview:self.skView];
+
+        const CGFloat padSide = 128.0f;
+        const CGFloat padPadding = 10.0f;
+
+        self.analogControl = ({
+            CGRect frame = CGRectMake(
+                padPadding,
+                CGRectGetHeight(self.skView.frame) - padPadding - padSide,
+                padSide,
+                padSide
+            );
+            AnalogControl *analogControl = [[AnalogControl alloc] initWithFrame:frame];
+            analogControl;
+        });
+        [self.view addSubview:self.analogControl];
+    }
 
 #ifdef DEBUG
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+    self.skView.showsFPS = YES;
+    self.skView.showsNodeCount = YES;
 #endif
-
-    if (!skView.scene) {
-        MyScene *scene = [[MyScene alloc]
-            initWithSize:skView.bounds.size carType:CRYellowCar level:CRLevelEasy];
-        scene.scaleMode = SKSceneScaleModeAspectFill;
-        [skView presentScene:scene];
-    }
 }
 
 - (BOOL)shouldAutorotate {
