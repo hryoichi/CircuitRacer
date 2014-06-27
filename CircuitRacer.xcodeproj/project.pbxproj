@@ -81,6 +81,7 @@
 		47696E49195D27EA00A41AC6 /* SKNode+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 47696E42195D27EA00A41AC6 /* SKNode+SKTExtras.m */; };
 		47696E4A195D27EA00A41AC6 /* SKTAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 47696E44195D27EA00A41AC6 /* SKTAudio.m */; };
 		47696E4B195D27EA00A41AC6 /* SKTUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 47696E46195D27EA00A41AC6 /* SKTUtils.mm */; };
+		47696E4E195D283500A41AC6 /* AnalogControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47696E4D195D283500A41AC6 /* AnalogControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +180,8 @@
 		47696E44195D27EA00A41AC6 /* SKTAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTAudio.m; sourceTree = "<group>"; };
 		47696E45195D27EA00A41AC6 /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
 		47696E46195D27EA00A41AC6 /* SKTUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SKTUtils.mm; sourceTree = "<group>"; };
+		47696E4C195D283500A41AC6 /* AnalogControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalogControl.h; sourceTree = "<group>"; };
+		47696E4D195D283500A41AC6 /* AnalogControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalogControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +252,8 @@
 				47117B521959CA1400B20209 /* ViewController.m */,
 				47117B541959CA1400B20209 /* MyScene.h */,
 				47117B551959CA1400B20209 /* MyScene.m */,
+				47696E4C195D283500A41AC6 /* AnalogControl.h */,
+				47696E4D195D283500A41AC6 /* AnalogControl.m */,
 				47117B571959CA1400B20209 /* Spaceship.png */,
 				47117B591959CA1400B20209 /* Images.xcassets */,
 				47117B431959CA1400B20209 /* Supporting Files */,
@@ -558,6 +563,7 @@
 				47696E4B195D27EA00A41AC6 /* SKTUtils.mm in Sources */,
 				47696E47195D27EA00A41AC6 /* SKAction+SKTExtras.m in Sources */,
 				47117B4D1959CA1400B20209 /* AppDelegate.m in Sources */,
+				47696E4E195D283500A41AC6 /* AnalogControl.m in Sources */,
 				47696E49195D27EA00A41AC6 /* SKNode+SKTExtras.m in Sources */,
 				47117B491959CA1400B20209 /* main.m in Sources */,
 			);
