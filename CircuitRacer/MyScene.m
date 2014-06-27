@@ -20,6 +20,7 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
 @property (nonatomic, assign) NSTimeInterval timeInSeconds;
 @property (nonatomic, assign) NSInteger noOfLabs;
 @property (nonatomic, strong) SKSpriteNode *car;
+@property (nonatomic, strong) SKLabelNode *laps, *time;
 
 @end
 
@@ -63,6 +64,7 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
     });
 
     [self p_addObjectsForTrack:track];
+    [self p_addGameUIForTrack:track];
 }
 
 - (void)p_loadLevel {
@@ -116,6 +118,24 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
 
     [self p_addBoxAt:CGPointMake(track.position.x + 130.0f, track.position.y)];
     [self p_addBoxAt:CGPointMake(track.position.x - 200.0f, track.position.y)];
+}
+
+- (void)p_addGameUIForTrack:(SKSpriteNode *)track {
+    // Displays the laps to go as set from LevelDetails.plist
+    _laps = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    _laps.text = [NSString stringWithFormat:@"Laps: %li", (long)_noOfLabs];
+    _laps.fontSize = 28.0f;
+    _laps.fontColor = [UIColor whiteColor];
+    _laps.position = CGPointMake(track.position.x, track.position.y + 20.0f);
+    [self addChild:_laps];
+
+    // Shows the time left to finish the laps remaining
+    _time = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    _time.text = [NSString stringWithFormat:@"Time: %li", (long)_timeInSeconds];
+    _time.fontSize = 28.0f;
+    _time.fontColor = [UIColor whiteColor];
+    _time.position = CGPointMake(track.position.x, track.position.y - 10.0f);
+    [self addChild:_time];
 }
 
 @end
