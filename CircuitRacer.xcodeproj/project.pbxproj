@@ -76,6 +76,11 @@
 		475E5EB6195A5A610063FD68 /* lap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 475E5E82195A5A610063FD68 /* lap.wav */; };
 		475E5EB7195A5A610063FD68 /* nitro.wav in Resources */ = {isa = PBXBuildFile; fileRef = 475E5E83195A5A610063FD68 /* nitro.wav */; };
 		475E5EB8195A5A610063FD68 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 475E5E84195A5A610063FD68 /* sprites.atlas */; };
+		47696E47195D27EA00A41AC6 /* SKAction+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 47696E3E195D27EA00A41AC6 /* SKAction+SKTExtras.m */; };
+		47696E48195D27EA00A41AC6 /* SKEmitterNode+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 47696E40195D27EA00A41AC6 /* SKEmitterNode+SKTExtras.m */; };
+		47696E49195D27EA00A41AC6 /* SKNode+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 47696E42195D27EA00A41AC6 /* SKNode+SKTExtras.m */; };
+		47696E4A195D27EA00A41AC6 /* SKTAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 47696E44195D27EA00A41AC6 /* SKTAudio.m */; };
+		47696E4B195D27EA00A41AC6 /* SKTUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 47696E46195D27EA00A41AC6 /* SKTUtils.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +169,16 @@
 		475E5E82195A5A610063FD68 /* lap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lap.wav; sourceTree = "<group>"; };
 		475E5E83195A5A610063FD68 /* nitro.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nitro.wav; sourceTree = "<group>"; };
 		475E5E84195A5A610063FD68 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
+		47696E3D195D27EA00A41AC6 /* SKAction+SKTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKAction+SKTExtras.h"; sourceTree = "<group>"; };
+		47696E3E195D27EA00A41AC6 /* SKAction+SKTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKAction+SKTExtras.m"; sourceTree = "<group>"; };
+		47696E3F195D27EA00A41AC6 /* SKEmitterNode+SKTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKEmitterNode+SKTExtras.h"; sourceTree = "<group>"; };
+		47696E40195D27EA00A41AC6 /* SKEmitterNode+SKTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKEmitterNode+SKTExtras.m"; sourceTree = "<group>"; };
+		47696E41195D27EA00A41AC6 /* SKNode+SKTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKNode+SKTExtras.h"; sourceTree = "<group>"; };
+		47696E42195D27EA00A41AC6 /* SKNode+SKTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKNode+SKTExtras.m"; sourceTree = "<group>"; };
+		47696E43195D27EA00A41AC6 /* SKTAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTAudio.h; sourceTree = "<group>"; };
+		47696E44195D27EA00A41AC6 /* SKTAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTAudio.m; sourceTree = "<group>"; };
+		47696E45195D27EA00A41AC6 /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
+		47696E46195D27EA00A41AC6 /* SKTUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SKTUtils.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +240,7 @@
 		47117B421959CA1400B20209 /* CircuitRacer */ = {
 			isa = PBXGroup;
 			children = (
+				47696E3C195D27EA00A41AC6 /* SKTUtils */,
 				475E5E4B195A5A610063FD68 /* Art */,
 				47117B4B1959CA1400B20209 /* AppDelegate.h */,
 				47117B4C1959CA1400B20209 /* AppDelegate.m */,
@@ -366,6 +382,23 @@
 				475E5E83195A5A610063FD68 /* nitro.wav */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		47696E3C195D27EA00A41AC6 /* SKTUtils */ = {
+			isa = PBXGroup;
+			children = (
+				47696E3D195D27EA00A41AC6 /* SKAction+SKTExtras.h */,
+				47696E3E195D27EA00A41AC6 /* SKAction+SKTExtras.m */,
+				47696E3F195D27EA00A41AC6 /* SKEmitterNode+SKTExtras.h */,
+				47696E40195D27EA00A41AC6 /* SKEmitterNode+SKTExtras.m */,
+				47696E41195D27EA00A41AC6 /* SKNode+SKTExtras.h */,
+				47696E42195D27EA00A41AC6 /* SKNode+SKTExtras.m */,
+				47696E43195D27EA00A41AC6 /* SKTAudio.h */,
+				47696E44195D27EA00A41AC6 /* SKTAudio.m */,
+				47696E45195D27EA00A41AC6 /* SKTUtils.h */,
+				47696E46195D27EA00A41AC6 /* SKTUtils.mm */,
+			);
+			path = SKTUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -519,8 +552,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				47117B561959CA1400B20209 /* MyScene.m in Sources */,
+				47696E4A195D27EA00A41AC6 /* SKTAudio.m in Sources */,
 				47117B531959CA1400B20209 /* ViewController.m in Sources */,
+				47696E48195D27EA00A41AC6 /* SKEmitterNode+SKTExtras.m in Sources */,
+				47696E4B195D27EA00A41AC6 /* SKTUtils.mm in Sources */,
+				47696E47195D27EA00A41AC6 /* SKAction+SKTExtras.m in Sources */,
 				47117B4D1959CA1400B20209 /* AppDelegate.m in Sources */,
+				47696E49195D27EA00A41AC6 /* SKNode+SKTExtras.m in Sources */,
 				47117B491959CA1400B20209 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
