@@ -20,6 +20,8 @@
 
 @implementation AnalogControl
 
+#pragma mark - Lifecycle
+
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
 
@@ -42,6 +44,56 @@
     }
 
     return self;
+}
+
+#pragma mark - Actions
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    CGPoint touchLocation = [[touches anyObject] locationInView:self];
+    [self p_updateKnobWithPosition:touchLocation];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    CGPoint touchLocation = [[touches anyObject] locationInView:self];
+    [self p_updateKnobWithPosition:touchLocation];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self p_updateKnobWithPosition:self.baseCenter];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self p_updateKnobWithPosition:self.baseCenter];
+}
+
+#pragma mark - Private
+
+- (void)p_updateKnobWithPosition:(CGPoint)position {
+    CGPoint positionToCenter = CGPointSubtract(position, self.baseCenter);
+    CGPoint direction;
+
+    if (CGPointEqualToPoint(positionToCenter, CGPointZero)) {
+        direction = CGPointZero;
+    }
+    else {
+        direction = CGPointNormalize(positionToCenter);
+    }
+
+    CGFloat radius = CGRectGetWidth(self.frame) / 2;
+    CGFloat length = CGPointLength(positionToCenter);
+
+    if (length > radius) {
+        length = radius;
+        positionToCenter = CGPointMultiplyScalar(direction, radius);
+    }
+
+    CGPoint relativePosition = CGPointMake(
+        direction.x * length / radius,
+        direction.y * length / radius
+    );
+
+    self.knobImageView.center = CGPointAdd(self.baseCenter, positionToCenter);
+    self.relativePosition = relativePosition;
 }
 
 @end

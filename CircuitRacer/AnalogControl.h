@@ -10,4 +10,6 @@
 
 @interface AnalogControl : UIView
 
+@property (nonatomic, assign) CGPoint relativePosition;
+
 @end
