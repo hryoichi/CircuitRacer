@@ -8,6 +8,7 @@
 
 #import "MyScene.h"
 #import "AnalogControl.h"
+#import "SKTUtils.h"
 
 typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
     CRBodyCar = 1 << 0,  // 0000001 = 1
@@ -148,6 +149,18 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
         analogControl.relativePosition.x * self.maxSpeed,
         -analogControl.relativePosition.y * self.maxSpeed
     );
+
+    if (!CGPointEqualToPoint(analogControl.relativePosition, CGPointZero)) {
+        self.car.zRotation = ({
+            CGPoint point = CGPointMake(
+                analogControl.relativePosition.x,
+                -analogControl.relativePosition.y
+            );
+
+            CGFloat angle = CGPointToAngle(point);
+            angle;
+        });
+    }
 }
 
 #pragma mark - Key-Value Observer
