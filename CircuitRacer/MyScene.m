@@ -87,7 +87,7 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
         NSString *imageName = [NSString stringWithFormat:@"car_%i", _carType];
         SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:imageName];
         sprite.position = startPosition;
-        sprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_car.frame.size];
+        sprite.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:sprite.frame.size];
         sprite.physicsBody.categoryBitMask    = CRBodyCar;
         sprite.physicsBody.collisionBitMask   = CRBodyBox;
         sprite.physicsBody.contactTestBitMask = CRBodyBox;
