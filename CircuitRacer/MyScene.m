@@ -24,6 +24,7 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
 @property (nonatomic, strong) SKSpriteNode *car;
 @property (nonatomic, strong) SKLabelNode *laps, *time;
 @property (nonatomic, assign) NSInteger maxSpeed;
+@property (nonatomic, assign) CGPoint trackCenter;
 
 @end
 
@@ -41,6 +42,25 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
     }
 
     return self;
+}
+
+- (void)update:(NSTimeInterval)currentTime {
+    static CGFloat nextProgressAngle = M_PI;
+    CGPoint vector = CGPointSubtract(self.car.position, self.trackCenter);
+    CGFloat progressAngle = CGPointToAngle(vector) + M_PI;
+
+    if (progressAngle > nextProgressAngle && (progressAngle - nextProgressAngle) < M_PI_4) {
+        nextProgressAngle += M_PI_2;
+
+        if (nextProgressAngle > 2 * M_PI) {
+            nextProgressAngle = 0;
+        }
+
+        if (fabsf(nextProgressAngle - M_PI) < FLT_EPSILON) {
+            self.noOfLabs -= 1;
+            self.laps.text = [NSString stringWithFormat:@"Laps: %li", (long)self.noOfLabs];
+        }
+    }
 }
 
 #pragma mark - Private
@@ -70,6 +90,8 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
     [self p_addGameUIForTrack:track];
 
     _maxSpeed = 125 * (1 + _carType);
+
+    _trackCenter = track.position;
 }
 
 - (void)p_loadLevel {
