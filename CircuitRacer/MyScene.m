@@ -7,6 +7,7 @@
 //
 
 #import "MyScene.h"
+#import "AnalogControl.h"
 
 typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
     CRBodyCar = 1 << 0,  // 0000001 = 1
@@ -21,6 +22,7 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
 @property (nonatomic, assign) NSInteger noOfLabs;
 @property (nonatomic, strong) SKSpriteNode *car;
 @property (nonatomic, strong) SKLabelNode *laps, *time;
+@property (nonatomic, assign) NSInteger maxSpeed;
 
 @end
 
@@ -65,6 +67,8 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
 
     [self p_addObjectsForTrack:track];
     [self p_addGameUIForTrack:track];
+
+    _maxSpeed = 125 * (1 + _carType);
 }
 
 - (void)p_loadLevel {
@@ -136,6 +140,22 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
     _time.fontColor = [UIColor whiteColor];
     _time.position = CGPointMake(track.position.x, track.position.y - 10.0f);
     [self addChild:_time];
+}
+
+- (void)p_analogControlUpdated:(AnalogControl *)analogControl {
+    // Negate the y-axis to bridge a gap between SpriteKit and UIKit
+    self.car.physicsBody.velocity = CGVectorMake(
+        analogControl.relativePosition.x * self.maxSpeed,
+        -analogControl.relativePosition.y * self.maxSpeed
+    );
+}
+
+#pragma mark - Key-Value Observer
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"relativePosition"]) {
+        [self p_analogControlUpdated:object];
+    }
 }
 
 @end

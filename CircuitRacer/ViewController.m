@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) SKView *skView;
 @property (nonatomic, strong) AnalogControl *analogControl;
+@property (nonatomic, strong) MyScene *scene;
 
 @end
 
@@ -49,6 +50,10 @@
             analogControl;
         });
         [self.view addSubview:self.analogControl];
+
+        [self.analogControl addObserver:scene forKeyPath:@"relativePosition"
+                                options:NSKeyValueObservingOptionNew context:nil];
+        self.scene = scene;
     }
 
 #ifdef DEBUG
@@ -68,6 +73,10 @@
     else {
         return UIInterfaceOrientationMaskAll;
     }
+}
+
+- (void)dealloc {
+    [self.analogControl removeObserver:self.scene forKeyPath:@"relativePosition"];
 }
 
 - (void)didReceiveMemoryWarning {
