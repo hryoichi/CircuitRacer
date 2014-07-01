@@ -25,6 +25,7 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
 @property (nonatomic, strong) SKLabelNode *laps, *time;
 @property (nonatomic, assign) NSInteger maxSpeed;
 @property (nonatomic, assign) CGPoint trackCenter;
+@property (nonatomic, assign) NSTimeInterval previousTimeInterval;
 
 // Sound effects
 @property (nonatomic, strong) SKAction *boxSoundAction;
@@ -51,6 +52,21 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
 }
 
 - (void)update:(NSTimeInterval)currentTime {
+    if (self.previousTimeInterval == 0) {
+        self.previousTimeInterval = currentTime;
+    }
+
+    if (self.isPaused) {
+        self.previousTimeInterval = currentTime;
+        return;
+    }
+
+    if (currentTime - self.previousTimeInterval > 1) {
+        self.timeInSeconds -= (currentTime - self.previousTimeInterval);
+        self.previousTimeInterval = currentTime;
+        self.time.text = [NSString stringWithFormat:@"Time: %.lf", self.timeInSeconds];
+    }
+
     static CGFloat nextProgressAngle = M_PI;
     CGPoint vector = CGPointSubtract(self.car.position, self.trackCenter);
     CGFloat progressAngle = CGPointToAngle(vector) + M_PI;
