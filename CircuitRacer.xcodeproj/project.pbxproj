@@ -24,6 +24,7 @@
 		47117B631959CA1400B20209 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47117B3E1959CA1400B20209 /* UIKit.framework */; };
 		47117B6B1959CA1400B20209 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47117B691959CA1400B20209 /* InfoPlist.strings */; };
 		47117B6D1959CA1400B20209 /* CircuitRacerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47117B6C1959CA1400B20209 /* CircuitRacerTests.m */; };
+		475D2DA319625B000015C6B8 /* SelectCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475D2DA219625B000015C6B8 /* SelectCarViewController.m */; };
 		475E5E85195A5A610063FD68 /* achievement-amateur.png in Resources */ = {isa = PBXBuildFile; fileRef = 475E5E4D195A5A610063FD68 /* achievement-amateur.png */; };
 		475E5E86195A5A610063FD68 /* achievement-destruction.png in Resources */ = {isa = PBXBuildFile; fileRef = 475E5E4E195A5A610063FD68 /* achievement-destruction.png */; };
 		475E5E87195A5A610063FD68 /* achievement-intermediate.png in Resources */ = {isa = PBXBuildFile; fileRef = 475E5E4F195A5A610063FD68 /* achievement-intermediate.png */; };
@@ -118,6 +119,8 @@
 		47117B681959CA1400B20209 /* CircuitRacerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CircuitRacerTests-Info.plist"; sourceTree = "<group>"; };
 		47117B6A1959CA1400B20209 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		47117B6C1959CA1400B20209 /* CircuitRacerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircuitRacerTests.m; sourceTree = "<group>"; };
+		475D2DA119625B000015C6B8 /* SelectCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCarViewController.h; sourceTree = "<group>"; };
+		475D2DA219625B000015C6B8 /* SelectCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCarViewController.m; sourceTree = "<group>"; };
 		475E5E4D195A5A610063FD68 /* achievement-amateur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-amateur.png"; sourceTree = "<group>"; };
 		475E5E4E195A5A610063FD68 /* achievement-destruction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-destruction.png"; sourceTree = "<group>"; };
 		475E5E4F195A5A610063FD68 /* achievement-intermediate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-intermediate.png"; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 				47117B4E1959CA1400B20209 /* Main.storyboard */,
 				47117B511959CA1400B20209 /* ViewController.h */,
 				47117B521959CA1400B20209 /* ViewController.m */,
+				475D2DA119625B000015C6B8 /* SelectCarViewController.h */,
+				475D2DA219625B000015C6B8 /* SelectCarViewController.m */,
 				47117B541959CA1400B20209 /* MyScene.h */,
 				47117B551959CA1400B20209 /* MyScene.m */,
 				47696E4C195D283500A41AC6 /* AnalogControl.h */,
@@ -566,6 +571,7 @@
 				47696E4E195D283500A41AC6 /* AnalogControl.m in Sources */,
 				47696E49195D27EA00A41AC6 /* SKNode+SKTExtras.m in Sources */,
 				47117B491959CA1400B20209 /* main.m in Sources */,
+				475D2DA319625B000015C6B8 /* SelectCarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
