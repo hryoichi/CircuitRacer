@@ -30,7 +30,7 @@
     if (!self.skView) {
         self.skView = [[SKView alloc] initWithFrame:self.view.bounds];
         MyScene *scene = [[MyScene alloc]
-            initWithSize:self.skView.bounds.size carType:CRYellowCar level:CRLevelEasy];
+            initWithSize:self.skView.bounds.size carType:self.carType level:self.levelType];
         scene.scaleMode = SKSceneScaleModeAspectFill;
         [self.skView presentScene:scene];
 
@@ -80,6 +80,10 @@
     }
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (void)dealloc {
     [self.analogControl removeObserver:self.scene forKeyPath:@"relativePosition"];
 }
@@ -99,6 +103,13 @@
                      cancelButtonTitle:nil
                      otherButtonTitles:nil];
     [alert show];
+
+    [self performSelector:@selector(p_goBack:) withObject:alert afterDelay:3.0];
+}
+
+- (void)p_goBack:(UIAlertView *)alert {
+    [alert dismissWithClickedButtonIndex:0 animated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

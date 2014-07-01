@@ -11,4 +11,7 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, assign) CRCarType carType;
+@property (nonatomic, assign) CRLevelType levelType;
+
 @end

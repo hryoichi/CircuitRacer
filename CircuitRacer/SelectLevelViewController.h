@@ -10,4 +10,6 @@
 
 @interface SelectLevelViewController : UIViewController
 
+@property (nonatomic, assign) CRCarType carType;
+
 @end

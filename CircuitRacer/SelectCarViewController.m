@@ -7,6 +7,8 @@
 //
 
 #import "SelectCarViewController.h"
+#import "SelectLevelViewController.h"
+#import "SKTAudio.h"
 
 @interface SelectCarViewController ()
 
@@ -14,36 +16,36 @@
 
 @implementation SelectCarViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+#pragma mark - Lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    [[SKTAudio sharedInstance] playBackgroundMusic:@"circuitracer.mp3"];
+}
+
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
-*/
+
+#pragma mark - Actions
+
+- (IBAction)carButtonDidTouchUpInside:(UIButton *)sender {
+    [[SKTAudio sharedInstance] playSoundEffect:@"button_press.wav"];
+
+    SelectLevelViewController *levelVC = [self.storyboard
+        instantiateViewControllerWithIdentifier:NSStringFromClass([SelectLevelViewController class])];
+    levelVC.carType = sender.tag;
+
+    [self.navigationController pushViewController:levelVC animated:YES];
+}
 
 @end
