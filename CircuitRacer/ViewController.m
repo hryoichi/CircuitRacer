@@ -54,6 +54,11 @@
         [self.analogControl addObserver:scene forKeyPath:@"relativePosition"
                                 options:NSKeyValueObservingOptionNew context:nil];
         self.scene = scene;
+
+        __weak typeof(self) weakSelf = self;
+        self.scene.gameOverBlock = ^(BOOL didWin) {
+            [weakSelf p_gameOverWithWin:didWin];
+        };
     }
 
 #ifdef DEBUG
@@ -82,6 +87,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
+}
+
+#pragma mark - Private
+
+- (void)p_gameOverWithWin:(BOOL)didWin {
+    UIAlertView *alert =
+    [[UIAlertView alloc] initWithTitle:didWin ? @"You won!" : @"You lost"
+                               message:@"Game Over"
+                              delegate:nil
+                     cancelButtonTitle:nil
+                     otherButtonTitles:nil];
+    [alert show];
 }
 
 @end

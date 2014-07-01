@@ -85,6 +85,11 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
             [self runAction:self.lapSoundAction];
         }
     }
+
+    if (self.timeInSeconds < 0 || self.noOfLabs == 0) {
+        self.paused = YES;
+        self.gameOverBlock(self.noOfLabs == 0);
+    }
 }
 
 #pragma mark - Private

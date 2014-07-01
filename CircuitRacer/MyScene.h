@@ -10,6 +10,8 @@
 
 @interface MyScene : SKScene
 
+@property (nonatomic, copy) void (^gameOverBlock)(BOOL didWin);
+
 - (instancetype)initWithSize:(CGSize)size carType:(CRCarType)carType level:(CRLevelType)levelType;
 
 @end
