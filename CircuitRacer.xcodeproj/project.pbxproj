@@ -25,6 +25,7 @@
 		47117B6B1959CA1400B20209 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47117B691959CA1400B20209 /* InfoPlist.strings */; };
 		47117B6D1959CA1400B20209 /* CircuitRacerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47117B6C1959CA1400B20209 /* CircuitRacerTests.m */; };
 		475D2DA319625B000015C6B8 /* SelectCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475D2DA219625B000015C6B8 /* SelectCarViewController.m */; };
+		475D2DA619625B310015C6B8 /* SelectLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475D2DA519625B310015C6B8 /* SelectLevelViewController.m */; };
 		475E5E85195A5A610063FD68 /* achievement-amateur.png in Resources */ = {isa = PBXBuildFile; fileRef = 475E5E4D195A5A610063FD68 /* achievement-amateur.png */; };
 		475E5E86195A5A610063FD68 /* achievement-destruction.png in Resources */ = {isa = PBXBuildFile; fileRef = 475E5E4E195A5A610063FD68 /* achievement-destruction.png */; };
 		475E5E87195A5A610063FD68 /* achievement-intermediate.png in Resources */ = {isa = PBXBuildFile; fileRef = 475E5E4F195A5A610063FD68 /* achievement-intermediate.png */; };
@@ -121,6 +122,8 @@
 		47117B6C1959CA1400B20209 /* CircuitRacerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircuitRacerTests.m; sourceTree = "<group>"; };
 		475D2DA119625B000015C6B8 /* SelectCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCarViewController.h; sourceTree = "<group>"; };
 		475D2DA219625B000015C6B8 /* SelectCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCarViewController.m; sourceTree = "<group>"; };
+		475D2DA419625B310015C6B8 /* SelectLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectLevelViewController.h; sourceTree = "<group>"; };
+		475D2DA519625B310015C6B8 /* SelectLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectLevelViewController.m; sourceTree = "<group>"; };
 		475E5E4D195A5A610063FD68 /* achievement-amateur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-amateur.png"; sourceTree = "<group>"; };
 		475E5E4E195A5A610063FD68 /* achievement-destruction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-destruction.png"; sourceTree = "<group>"; };
 		475E5E4F195A5A610063FD68 /* achievement-intermediate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "achievement-intermediate.png"; sourceTree = "<group>"; };
@@ -255,6 +258,8 @@
 				47117B521959CA1400B20209 /* ViewController.m */,
 				475D2DA119625B000015C6B8 /* SelectCarViewController.h */,
 				475D2DA219625B000015C6B8 /* SelectCarViewController.m */,
+				475D2DA419625B310015C6B8 /* SelectLevelViewController.h */,
+				475D2DA519625B310015C6B8 /* SelectLevelViewController.m */,
 				47117B541959CA1400B20209 /* MyScene.h */,
 				47117B551959CA1400B20209 /* MyScene.m */,
 				47696E4C195D283500A41AC6 /* AnalogControl.h */,
@@ -562,6 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47117B561959CA1400B20209 /* MyScene.m in Sources */,
+				475D2DA619625B310015C6B8 /* SelectLevelViewController.m in Sources */,
 				47696E4A195D27EA00A41AC6 /* SKTAudio.m in Sources */,
 				47117B531959CA1400B20209 /* ViewController.m in Sources */,
 				47696E48195D27EA00A41AC6 /* SKEmitterNode+SKTExtras.m in Sources */,
