@@ -15,7 +15,27 @@
                     <view key="view" contentMode="scaleToFill" id="bdc-N1-crn">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7F-rE-u7h">
+                                <rect key="frame" x="506" y="0.0" width="62" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="D3C-98-Vhl"/>
+                                    <constraint firstAttribute="height" constant="36" id="y2e-WH-L96"/>
+                                </constraints>
+                                <state key="normal" image="btn-pause.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseButtonDidTouchUpInside:" destination="LVB-YS-i5n" eventType="touchUpInside" id="h7r-E4-Tdd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H7F-rE-u7h" firstAttribute="top" secondItem="TvN-0d-DFh" secondAttribute="bottom" id="9Hh-4f-Bxw"/>
+                            <constraint firstAttribute="trailing" secondItem="H7F-rE-u7h" secondAttribute="trailing" id="qy7-PI-TN2"/>
+                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -232,6 +252,7 @@
         <image name="btn-easy.png" width="301" height="55"/>
         <image name="btn-hard.png" width="301" height="55"/>
         <image name="btn-medium.png" width="301" height="55"/>
+        <image name="btn-pause.png" width="62" height="36"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>

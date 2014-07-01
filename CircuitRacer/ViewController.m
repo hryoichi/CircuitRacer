@@ -10,7 +10,7 @@
 #import "MyScene.h"
 #import "AnalogControl.h"
 
-@interface ViewController ()
+@interface ViewController () <UIAlertViewDelegate>
 
 @property (nonatomic, strong) SKView *skView;
 @property (nonatomic, strong) AnalogControl *analogControl;
@@ -22,6 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    [self.view sendSubviewToBack:self.skView];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -93,6 +99,12 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+#pragma mark - Actions
+
+- (IBAction)pauseButtonDidTouchUpInside:(id)sender {
+    [self p_showInGameMenu];
+}
+
 #pragma mark - Private
 
 - (void)p_gameOverWithWin:(BOOL)didWin {
@@ -110,6 +122,28 @@
 - (void)p_goBack:(UIAlertView *)alert {
     [alert dismissWithClickedButtonIndex:0 animated:YES];
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (void)p_showInGameMenu {
+    UIAlertView *alert =
+    [[UIAlertView alloc] initWithTitle:@"Game Menu"
+                               message:@"What would you like to do?"
+                              delegate:self
+                     cancelButtonTitle:@"Resume level"
+                     otherButtonTitles:@"Go to menu", nil];
+    [alert show];
+
+    self.scene.paused = YES;
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    self.scene.paused = NO;
+
+    if (buttonIndex == alertView.firstOtherButtonIndex) {
+        [self p_gameOverWithWin:NO];
+    }
 }
 
 @end
