@@ -26,6 +26,12 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
 @property (nonatomic, assign) NSInteger maxSpeed;
 @property (nonatomic, assign) CGPoint trackCenter;
 
+// Sound effects
+@property (nonatomic, strong) SKAction *boxSoundAction;
+@property (nonatomic, strong) SKAction *hornSoundAction;
+@property (nonatomic, strong) SKAction *lapSoundAction;
+@property (nonatomic, strong) SKAction *nitroSoundAction;
+
 @end
 
 @implementation MyScene
@@ -59,6 +65,8 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
         if (fabsf(nextProgressAngle - M_PI) < FLT_EPSILON) {
             self.noOfLabs -= 1;
             self.laps.text = [NSString stringWithFormat:@"Laps: %li", (long)self.noOfLabs];
+
+            [self runAction:self.lapSoundAction];
         }
     }
 }
@@ -92,6 +100,11 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
     _maxSpeed = 125 * (1 + _carType);
 
     _trackCenter = track.position;
+
+    _boxSoundAction = [SKAction playSoundFileNamed:@"box.wav" waitForCompletion:NO];
+    _hornSoundAction = [SKAction playSoundFileNamed:@"horn.wav" waitForCompletion:NO];
+    _lapSoundAction = [SKAction playSoundFileNamed:@"lap.wav" waitForCompletion:NO];
+    _nitroSoundAction = [SKAction playSoundFileNamed:@"nitro.wav" waitForCompletion:NO];
 }
 
 - (void)p_loadLevel {
