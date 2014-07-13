@@ -22,7 +22,7 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
 @property (nonatomic, assign) CRCarType carType;
 @property (nonatomic, assign) CRLevelType levelType;
 @property (nonatomic, assign) NSTimeInterval timeInSeconds;
-@property (nonatomic, assign) NSInteger noOfLabs;
+@property (nonatomic, assign) NSInteger numOfLaps;
 @property (nonatomic, strong) SKSpriteNode *car;
 @property (nonatomic, strong) SKLabelNode *laps, *time;
 @property (nonatomic, assign) NSInteger maxSpeed;
@@ -83,16 +83,16 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
         }
 
         if (fabsf(nextProgressAngle - M_PI) < FLT_EPSILON) {
-            self.noOfLabs -= 1;
-            self.laps.text = [NSString stringWithFormat:@"Laps: %li", (long)self.noOfLabs];
+            self.numOfLaps -= 1;
+            self.laps.text = [NSString stringWithFormat:@"Laps: %li", (long)self.numOfLaps];
 
             [self runAction:self.lapSoundAction];
         }
     }
 
-    if (self.timeInSeconds < 0 || self.noOfLabs == 0) {
+    if (self.timeInSeconds < 0 || self.numOfLaps == 0) {
         self.paused = YES;
-        BOOL hasWon = self.noOfLabs == 0;
+        BOOL hasWon = self.numOfLaps == 0;
 
         [self p_reportAchievementsForGameState:hasWon];
         self.gameOverBlock(hasWon);
@@ -145,7 +145,7 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
     _timeInSeconds = [timeInSeconds doubleValue];
 
     NSNumber *laps = level[_levelType - 1][@"laps"];
-    _noOfLabs = [laps integerValue];
+    _numOfLaps = [laps integerValue];
 }
 
 - (void)p_addCarAtPosition:(CGPoint)startPosition {
@@ -193,7 +193,7 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
 - (void)p_addGameUIForTrack:(SKSpriteNode *)track {
     // Displays the laps to go as set from LevelDetails.plist
     _laps = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-    _laps.text = [NSString stringWithFormat:@"Laps: %li", (long)_noOfLabs];
+    _laps.text = [NSString stringWithFormat:@"Laps: %li", (long)_numOfLaps];
     _laps.fontSize = 28.0f;
     _laps.fontColor = [UIColor whiteColor];
     _laps.position = CGPointMake(track.position.x, track.position.y + 20.0f);
