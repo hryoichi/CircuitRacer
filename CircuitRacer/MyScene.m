@@ -9,13 +9,15 @@
 #import "MyScene.h"
 #import "AnalogControl.h"
 #import "SKTUtils.h"
+#import "AchievementsHelper.h"
+#import "GameKitHelper.h"
 
 typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
     CRBodyCar = 1 << 0,  // 0000001 = 1
     CRBodyBox = 1 << 1,  // 0000010 = 2
 };
 
-@interface MyScene ()
+@interface MyScene () <SKPhysicsContactDelegate>
 
 @property (nonatomic, assign) CRCarType carType;
 @property (nonatomic, assign) CRLevelType levelType;
@@ -26,6 +28,7 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
 @property (nonatomic, assign) NSInteger maxSpeed;
 @property (nonatomic, assign) CGPoint trackCenter;
 @property (nonatomic, assign) NSTimeInterval previousTimeInterval;
+@property (nonatomic, assign) NSUInteger numOfCollisionsWithBoxes;
 
 // Sound effects
 @property (nonatomic, strong) SKAction *boxSoundAction;
@@ -45,6 +48,7 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
     if (self) {
         _carType = carType;
         _levelType = levelType;
+        _numOfCollisionsWithBoxes = 0;
         [self p_initializeGame];
     }
 
@@ -88,7 +92,10 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
 
     if (self.timeInSeconds < 0 || self.noOfLabs == 0) {
         self.paused = YES;
-        self.gameOverBlock(self.noOfLabs == 0);
+        BOOL hasWon = self.noOfLabs == 0;
+
+        [self p_reportAchievementsForGameState:hasWon];
+        self.gameOverBlock(hasWon);
     }
 }
 
@@ -126,6 +133,8 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
     _hornSoundAction = [SKAction playSoundFileNamed:@"horn.wav" waitForCompletion:NO];
     _lapSoundAction = [SKAction playSoundFileNamed:@"lap.wav" waitForCompletion:NO];
     _nitroSoundAction = [SKAction playSoundFileNamed:@"nitro.wav" waitForCompletion:NO];
+
+    self.physicsWorld.contactDelegate = self;
 }
 
 - (void)p_loadLevel {
@@ -219,11 +228,33 @@ typedef NS_OPTIONS(NSUInteger, CRPhysicsCategory) {
     }
 }
 
+- (void)p_reportAchievementsForGameState:(BOOL)hasWon {
+    NSMutableArray *achievements = [@[] mutableCopy];
+
+    [achievements addObject:[AchievementsHelper collisionAchievement:self.numOfCollisionsWithBoxes]];
+
+    if (hasWon) {
+        [achievements addObject:[AchievementsHelper achievementForLevel:self.levelType]];
+    }
+
+    [[GameKitHelper sharedGameKitHelper] reportAchievements:achievements];
+}
+
 #pragma mark - Key-Value Observer
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"relativePosition"]) {
         [self p_analogControlUpdated:object];
+    }
+}
+
+#pragma mark - SKPhysicsContactDelegate
+
+- (void)didBeginContact:(SKPhysicsContact *)contact {
+    if (contact.bodyA.categoryBitMask + contact.bodyB.categoryBitMask == CRBodyCar + CRBodyBox) {
+        self.numOfCollisionsWithBoxes += 1;
+
+        [self runAction:self.boxSoundAction];
     }
 }
 
