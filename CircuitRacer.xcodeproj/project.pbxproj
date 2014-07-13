@@ -84,6 +84,7 @@
 		47696E4A195D27EA00A41AC6 /* SKTAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 47696E44195D27EA00A41AC6 /* SKTAudio.m */; };
 		47696E4B195D27EA00A41AC6 /* SKTUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 47696E46195D27EA00A41AC6 /* SKTUtils.mm */; };
 		47696E4E195D283500A41AC6 /* AnalogControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47696E4D195D283500A41AC6 /* AnalogControl.m */; };
+		47FAC4051972693C00C4C2B3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47FAC4041972693C00C4C2B3 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +189,7 @@
 		47696E46195D27EA00A41AC6 /* SKTUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SKTUtils.mm; sourceTree = "<group>"; };
 		47696E4C195D283500A41AC6 /* AnalogControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalogControl.h; sourceTree = "<group>"; };
 		47696E4D195D283500A41AC6 /* AnalogControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalogControl.m; sourceTree = "<group>"; };
+		47FAC4041972693C00C4C2B3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				47117B3F1959CA1400B20209 /* UIKit.framework in Frameworks */,
 				47117B411959CA1400B20209 /* SpriteKit.framework in Frameworks */,
 				47117B3B1959CA1400B20209 /* Foundation.framework in Frameworks */,
+				47FAC4051972693C00C4C2B3 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +240,7 @@
 		47117B391959CA1400B20209 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47FAC4041972693C00C4C2B3 /* GameKit.framework */,
 				47117B3A1959CA1400B20209 /* Foundation.framework */,
 				47117B3C1959CA1400B20209 /* CoreGraphics.framework */,
 				47117B3E1959CA1400B20209 /* UIKit.framework */,
@@ -463,6 +467,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Ryoichi Hara";
 				TargetAttributes = {
+					47117B361959CA1400B20209 = {
+						DevelopmentTeam = 9Y6KN5AA6R;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
 					47117B5E1959CA1400B20209 = {
 						TestTargetID = 47117B361959CA1400B20209;
 					};
@@ -702,10 +714,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CircuitRacer/CircuitRacer-Prefix.pch";
 				INFOPLIST_FILE = "CircuitRacer/CircuitRacer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -716,10 +731,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CircuitRacer/CircuitRacer-Prefix.pch";
 				INFOPLIST_FILE = "CircuitRacer/CircuitRacer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
