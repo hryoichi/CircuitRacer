@@ -86,6 +86,7 @@
 		47696E4E195D283500A41AC6 /* AnalogControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47696E4D195D283500A41AC6 /* AnalogControl.m */; };
 		47FAC4051972693C00C4C2B3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47FAC4041972693C00C4C2B3 /* GameKit.framework */; };
 		47FDCB8B1972B59B003723C1 /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FDCB8A1972B59B003723C1 /* GameKitHelper.m */; };
+		47FDCB8E1972BF35003723C1 /* CircuitRacerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FDCB8D1972BF35003723C1 /* CircuitRacerNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +194,8 @@
 		47FAC4041972693C00C4C2B3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		47FDCB891972B59B003723C1 /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameKitHelper.h; path = GameKit/GameKitHelper.h; sourceTree = "<group>"; };
 		47FDCB8A1972B59B003723C1 /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameKitHelper.m; path = GameKit/GameKitHelper.m; sourceTree = "<group>"; };
+		47FDCB8C1972BF35003723C1 /* CircuitRacerNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircuitRacerNavigationController.h; sourceTree = "<group>"; };
+		47FDCB8D1972BF35003723C1 /* CircuitRacerNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircuitRacerNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +271,8 @@
 				475D2DA219625B000015C6B8 /* SelectCarViewController.m */,
 				475D2DA419625B310015C6B8 /* SelectLevelViewController.h */,
 				475D2DA519625B310015C6B8 /* SelectLevelViewController.m */,
+				47FDCB8C1972BF35003723C1 /* CircuitRacerNavigationController.h */,
+				47FDCB8D1972BF35003723C1 /* CircuitRacerNavigationController.m */,
 				47117B541959CA1400B20209 /* MyScene.h */,
 				47117B551959CA1400B20209 /* MyScene.m */,
 				47696E4C195D283500A41AC6 /* AnalogControl.h */,
@@ -602,6 +607,7 @@
 				47117B4D1959CA1400B20209 /* AppDelegate.m in Sources */,
 				47696E4E195D283500A41AC6 /* AnalogControl.m in Sources */,
 				47696E49195D27EA00A41AC6 /* SKNode+SKTExtras.m in Sources */,
+				47FDCB8E1972BF35003723C1 /* CircuitRacerNavigationController.m in Sources */,
 				47117B491959CA1400B20209 /* main.m in Sources */,
 				475D2DA319625B000015C6B8 /* SelectCarViewController.m in Sources */,
 			);
