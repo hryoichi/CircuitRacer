@@ -87,6 +87,7 @@
 		47FAC4051972693C00C4C2B3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47FAC4041972693C00C4C2B3 /* GameKit.framework */; };
 		47FDCB8B1972B59B003723C1 /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FDCB8A1972B59B003723C1 /* GameKitHelper.m */; };
 		47FDCB8E1972BF35003723C1 /* CircuitRacerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FDCB8D1972BF35003723C1 /* CircuitRacerNavigationController.m */; };
+		47FDCB911972CB4A003723C1 /* AchievementsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FDCB901972CB4A003723C1 /* AchievementsHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +197,8 @@
 		47FDCB8A1972B59B003723C1 /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameKitHelper.m; path = GameKit/GameKitHelper.m; sourceTree = "<group>"; };
 		47FDCB8C1972BF35003723C1 /* CircuitRacerNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircuitRacerNavigationController.h; sourceTree = "<group>"; };
 		47FDCB8D1972BF35003723C1 /* CircuitRacerNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircuitRacerNavigationController.m; sourceTree = "<group>"; };
+		47FDCB8F1972CB4A003723C1 /* AchievementsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AchievementsHelper.h; path = GameKit/AchievementsHelper.h; sourceTree = "<group>"; };
+		47FDCB901972CB4A003723C1 /* AchievementsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AchievementsHelper.m; path = GameKit/AchievementsHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,6 +437,8 @@
 			children = (
 				47FDCB891972B59B003723C1 /* GameKitHelper.h */,
 				47FDCB8A1972B59B003723C1 /* GameKitHelper.m */,
+				47FDCB8F1972CB4A003723C1 /* AchievementsHelper.h */,
+				47FDCB901972CB4A003723C1 /* AchievementsHelper.m */,
 			);
 			name = GameKit;
 			sourceTree = "<group>";
@@ -604,6 +609,7 @@
 				47696E48195D27EA00A41AC6 /* SKEmitterNode+SKTExtras.m in Sources */,
 				47696E4B195D27EA00A41AC6 /* SKTUtils.mm in Sources */,
 				47696E47195D27EA00A41AC6 /* SKAction+SKTExtras.m in Sources */,
+				47FDCB911972CB4A003723C1 /* AchievementsHelper.m in Sources */,
 				47117B4D1959CA1400B20209 /* AppDelegate.m in Sources */,
 				47696E4E195D283500A41AC6 /* AnalogControl.m in Sources */,
 				47696E49195D27EA00A41AC6 /* SKNode+SKTExtras.m in Sources */,
