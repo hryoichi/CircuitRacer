@@ -7,7 +7,16 @@
 //
 
 @import Foundation;
+@import GameKit;
+
+UIKIT_EXTERN NSString * const PresentAuthenticationViewController;
 
 @interface GameKitHelper : NSObject
+
+@property (nonatomic, strong, readonly) UIViewController *authenticationViewController;
+@property (nonatomic, strong, readonly) NSError *lastError;
+
++ (instancetype)sharedGameKitHelper;
+- (void)authenticateLocalPlayer;
 
 @end
