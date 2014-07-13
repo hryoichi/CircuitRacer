@@ -85,6 +85,7 @@
 		47696E4B195D27EA00A41AC6 /* SKTUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 47696E46195D27EA00A41AC6 /* SKTUtils.mm */; };
 		47696E4E195D283500A41AC6 /* AnalogControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47696E4D195D283500A41AC6 /* AnalogControl.m */; };
 		47FAC4051972693C00C4C2B3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47FAC4041972693C00C4C2B3 /* GameKit.framework */; };
+		47FDCB8B1972B59B003723C1 /* GameKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FDCB8A1972B59B003723C1 /* GameKitHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +191,8 @@
 		47696E4C195D283500A41AC6 /* AnalogControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalogControl.h; sourceTree = "<group>"; };
 		47696E4D195D283500A41AC6 /* AnalogControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalogControl.m; sourceTree = "<group>"; };
 		47FAC4041972693C00C4C2B3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		47FDCB891972B59B003723C1 /* GameKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameKitHelper.h; path = GameKit/GameKitHelper.h; sourceTree = "<group>"; };
+		47FDCB8A1972B59B003723C1 /* GameKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameKitHelper.m; path = GameKit/GameKitHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +256,7 @@
 		47117B421959CA1400B20209 /* CircuitRacer */ = {
 			isa = PBXGroup;
 			children = (
+				47FDCB881972B570003723C1 /* GameKit */,
 				47696E3C195D27EA00A41AC6 /* SKTUtils */,
 				475E5E4B195A5A610063FD68 /* Art */,
 				47117B4B1959CA1400B20209 /* AppDelegate.h */,
@@ -420,6 +424,15 @@
 			path = SKTUtils;
 			sourceTree = "<group>";
 		};
+		47FDCB881972B570003723C1 /* GameKit */ = {
+			isa = PBXGroup;
+			children = (
+				47FDCB891972B59B003723C1 /* GameKitHelper.h */,
+				47FDCB8A1972B59B003723C1 /* GameKitHelper.m */,
+			);
+			name = GameKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -581,6 +594,7 @@
 				47117B561959CA1400B20209 /* MyScene.m in Sources */,
 				475D2DA619625B310015C6B8 /* SelectLevelViewController.m in Sources */,
 				47696E4A195D27EA00A41AC6 /* SKTAudio.m in Sources */,
+				47FDCB8B1972B59B003723C1 /* GameKitHelper.m in Sources */,
 				47117B531959CA1400B20209 /* ViewController.m in Sources */,
 				47696E48195D27EA00A41AC6 /* SKEmitterNode+SKTExtras.m in Sources */,
 				47696E4B195D27EA00A41AC6 /* SKTUtils.mm in Sources */,
