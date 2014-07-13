@@ -221,10 +221,10 @@
             </objects>
             <point key="canvasLocation" x="163" y="219"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Circuit Racer Navigation Controller-->
         <scene sceneID="9HD-8m-W60">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hCv-SF-f3b" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hCv-SF-f3b" customClass="CircuitRacerNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
