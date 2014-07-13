@@ -7,7 +7,11 @@
 //
 
 @import Foundation;
+@import GameKit;
 
 @interface AchievementsHelper : NSObject
+
++ (GKAchievement *)collisionAchievement:(NSUInteger)numOfCollisions;
++ (GKAchievement *)achievementForLevel:(CRLevelType)levelType;
 
 @end
