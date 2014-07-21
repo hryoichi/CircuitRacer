@@ -19,5 +19,6 @@ UIKIT_EXTERN NSString * const PresentAuthenticationViewController;
 + (instancetype)sharedGameKitHelper;
 - (void)authenticateLocalPlayer;
 - (void)reportAchievements:(NSArray *)achievements;
+- (void)showGKGameCenterViewController:(UIViewController *)viewController;
 
 @end
